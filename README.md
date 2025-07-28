@@ -26,3 +26,9 @@ NWS alerts:
   Headline and Location
     when multiple will add a new line with same data
 ```
+
+## Clock
+Uses NeoPixels to create a clock. Currently set up for a LED count of 60.
+
+## Device 
+Currently for and ESP32. Needs wifi connection.
