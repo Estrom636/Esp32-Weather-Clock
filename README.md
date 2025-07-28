@@ -15,7 +15,8 @@ NWS alerts: Using the background of the clock to indicate the message level
     order of priority -> warning, advisory, watch
 ```
 
-## Discord notifications
+## Discord messages
+To send messages it uses [Usini Discord WebHook](https://github.com/usini/usini_discord_webhook) go to https://github.com/usini/usini_discord_webhook to learn more about it.
 ```
 Weather:
   Temperature: current and forcast
