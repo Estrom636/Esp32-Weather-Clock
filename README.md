@@ -36,4 +36,4 @@ Currently for and ESP32. Needs wifi connection.
 # Code Setup
 ## Time
  Need to set gmtOffset_sec, this is the offset from GMT(timezone) in seconds
-  Example: Central Standard Time(CST) is -6 hours so it is -21600 seconds
+   Example: Central Standard Time(CST) is -6 hours so it is -21600 seconds
