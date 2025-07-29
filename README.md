@@ -34,6 +34,10 @@ Uses NeoPixels to create a clock. Currently set up for a LED count of 60.
 Currently for and ESP32. Needs wifi connection.
 
 # Code Setup
+## WiFi
+  ssid is your WiFi name\
+  password is your WiFi password, if no password just leave blank
+
 ## Time
   Need to set gmtOffset_sec, this is the offset from GMT(timezone) in seconds\
   Example: Central Standard Time(CST) is -6 hours so it is -21600 seconds. <br/>
