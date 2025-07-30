@@ -46,7 +46,7 @@ Currently for and ESP32. Needs wifi connection.
   So 1 hour is 3600 seconds, this only take effect if Daylight Saving Time is in efect.
 
 ## Discord
-  "need to write this"
+  A weblink for the server channel will be needed. The first slash of numbers in the CHANNEL_ID, and the last section is the TOKEN. For more information and examples go to https://github.com/usini/usini_discord_webhook.
 
 ## Weather and Alerts
 
