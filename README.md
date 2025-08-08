@@ -76,3 +76,15 @@ Currently for and ESP32. Needs wifi connection.
      - Example: Douglas County, WI -> FIPS = 55031 -> WIC031
   3. Add the code from above to https://api.weather.gov/alerts/active/zone/{FIPScode}
      - Example: https://api.weather.gov/alerts/active/zone/WIC031
+    
+
+# Changes to Code/Function
+## Change/Addition in new version
+This is what has changed in this version
+ - Nothing
+
+## Next Changes/Additions
+This could happen at any point in time
+ - Limit / speed of wifi reconnect and data pull
+ - Make the api pull an var input in the method not just at the top (to have multiple locations)
+
