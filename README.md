@@ -1,4 +1,4 @@
-# Weather_Clock
+# Weather Clock
 
   This is an Arduino Based Weather Clock using NeoPixels. Displays the weather (temperature and precipitation), National Weather Service alerts, and sends discord messages.
 
