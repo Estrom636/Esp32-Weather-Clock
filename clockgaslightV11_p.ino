@@ -113,6 +113,10 @@ void loop() {
   printLocalTime();
 }
 
+/*
+  Getting and showing the time in the serial monitor and on the neoPixel ring
+  calls the other weather methods at set times
+*/
 void printLocalTime() {
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
@@ -270,6 +274,7 @@ void printLocalTime() {
   Serial.println(curHeatF);
 }
 
+//send the data to discorc
 void weatherDATA() {
   discord.send("Current temp: " + String(curTempF) + "F, Forcast temp: " + String(preTempF) + "F");
   if(curChillF <= 0){
@@ -281,6 +286,7 @@ void weatherDATA() {
   discord.send("Precipitation: " + String(twoPOP) + "%");
 }
 
+//Sets current temperature, wind chill, and heat index
 void currentDATA(){
   HTTPClient http;
   http.begin(website2);
@@ -335,6 +341,7 @@ void currentDATA(){
   }
 }
 
+//Sets the temperature and precipitattion based on the api responce
 void futureDATA(){
   HTTPClient http2;
   http2.begin(website);
@@ -372,6 +379,8 @@ void futureDATA(){
   Serial.println(String(preTempF) + ", " + String(dif) + ", " + String(twoPOP));
 }
 
+//send discord notificaton for the alerts
+//sets the background color of the clock based on alerts severity
 void alerts(){
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http3;
@@ -437,6 +446,7 @@ void alerts(){
   }
 }
 
+//restarts the wifi
 void wifirestart(){
   WiFi.disconnect();
   pixels.setPixelColor(6, 5, 5, 5);
@@ -462,6 +472,11 @@ void wifirestart(){
   discord.send("WiFi restarted");
 }
 
+/*
+  Param: red, green, and blue value
+  Param: factor (the amount to change the RGB values by)
+  Return: the color for neoPixel
+*/
 uint32_t dimColor(uint8_t r, uint8_t g, uint8_t b, float factor) {
   return pixels.Color(r * factor, g * factor, b * factor);
 }
