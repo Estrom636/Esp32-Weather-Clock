@@ -2,6 +2,11 @@
 
   This is an Arduino Based Weather Clock using NeoPixels. Displays the weather (temperature and precipitation), National Weather Service alerts, and sends discord messages.
 
+## Versions
+
+ - V11 -> Only one weather location
+ - V12 -> Two weather locations, mac address info
+
 ## Weather display:
 ```
 Temperature: Using color coding on the clock
@@ -81,7 +86,8 @@ Currently for and ESP32. Needs wifi connection.
 # Changes to Code/Function
 ## Change/Addition in new version
 This is what has changed in this version
- - Nothing
+ - Added a second locations to send notifications for
+ - Added mac address infomation
 
 ## Next Changes/Additions
 This could happen at any point in time
