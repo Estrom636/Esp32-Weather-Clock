@@ -6,6 +6,7 @@
 
  - V11 -> Only one weather location
  - V12 -> Two weather locations, mac address info
+ - V13 -> Discord Bot to send message
 
 ## Weather display:
 ```
@@ -21,7 +22,8 @@ National Weather Service alerts: Using the background of the clock to indicate t
 ```
 
 ## Discord messages
-To send messages it uses [Usini Discord WebHook](https://github.com/usini/usini_discord_webhook).
+V11 and V12 use [Usini Discord WebHook](https://github.com/usini/usini_discord_webhook) to send messages.\
+V13 uses built in code to send via a Bot.
 ```
 Weather:
   Temperature: current and forcast
@@ -51,7 +53,12 @@ Currently for and ESP32. Needs wifi connection.
   So 1 hour is 3600 seconds, this only take effect if Daylight Saving Time is in efect.
 
 ## Discord
+### Version 11 and 12
   A weblink for the server channel will be needed. The first slash of numbers in the CHANNEL_ID, and the last section is the TOKEN. For more information and examples go to https://github.com/usini/usini_discord_webhook.
+### Version 13 and later
+  First you will need to create a Discord Bot. To create the bot you will need to go to your developer page, then applications. Now create a new applications, go to bot and then reset the token, after reseting this will need to be save for your code and added to BOT_TOKEN in the code.\
+  To add the bot to your discord server go to OAuth2 page on the developers applications page. To create the link you need to select bot in the OAuth2 URL Generator, then the permitions that you want easiest is to just fo with Administrator. Finaly copy the Generated URL into your web browers and follow the steps.\
+  One final thing is you will need to get the channel id from what ever channel you are adding the clock to. This can done by right clicking on the channel and clicking Copy Channel ID.
 
 ## Weather and Alerts
 
@@ -86,11 +93,14 @@ Currently for and ESP32. Needs wifi connection.
 # Changes to Code/Function
 ## Change/Addition in new version
 This is what has changed in this version
+ - Added a built in Discord messaging system using a bot
+
+## Old Change/Addition in new version
+V12
  - Added a second locations to send notifications for
  - Added mac address infomation
 
 ## Next Changes/Additions
 This could happen at any point in time
- - Limit / speed of wifi reconnect and data pull
- - Make the api pull an var input in the method not just at the top (to have multiple locations)
+
 
