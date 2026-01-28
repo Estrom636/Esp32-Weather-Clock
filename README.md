@@ -82,7 +82,7 @@ Currently for and ESP32. Needs wifi connection.
   4. Add the code from above to https://api.weather.gov/stations/{stationIdentifier}/observations/latest?require_qc=true
      - Example: https://api.weather.gov/stations/PAWD/observations/latest?require_qc=true
 
-### Alerts (Variable = website3)
+### Alerts (Variable = website3)   ~*This breaks and might not reset to no alerts*
   1. Locate the Federal Information Processing System (FIPS) Code for the wanted countys [Helpful Link](https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt)
   2. Take the state abbreviation add C and then add the last 3 numbers of the FIPS code
      - Example: Douglas County, WI -> FIPS = 55031 -> WIC031
