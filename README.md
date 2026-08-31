@@ -7,6 +7,7 @@
  - V11 -> Only one weather location
  - V12 -> Two weather locations, mac address info
  - V13 -> Discord Bot to send message
+ - V14 -> Added to use both alerts due to different type going to the two different ones
 
 ## Weather display:
 ```
@@ -82,7 +83,7 @@ Currently for and ESP32. Needs wifi connection.
   4. Add the code from above to https://api.weather.gov/stations/{stationIdentifier}/observations/latest?require_qc=true
      - Example: https://api.weather.gov/stations/PAWD/observations/latest?require_qc=true
 
-### Alerts (Variable = website3)   ~*This breaks and might not reset to no alerts*
+### Alerts (Variable = website3)   ~*This breaks and might not reset to no alerts*  ~*This need to both Zone and county codes*
   1. Locate the Federal Information Processing System (FIPS) Code for the wanted countys [Helpful Link](https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt)
   2. Take the state abbreviation add C and then add the last 3 numbers of the FIPS code
      - Example: Douglas County, WI -> FIPS = 55031 -> WIC031
