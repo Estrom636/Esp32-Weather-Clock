@@ -168,10 +168,12 @@ void printLocalTime() {
   hourt2 = hour + 1;
   if (hour == 1) hourt2 = 24;
 
+  hour = hour + 1;
+
   if (hour > 12) {
     hour = hour - 12;
   }
-  double hournew = hour + 1;
+  double hournew = hour;
   hournew = (hournew / 12) * 60;
   hour = (int)hournew;
   if (hour == 60) {
