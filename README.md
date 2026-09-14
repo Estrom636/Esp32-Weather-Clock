@@ -83,25 +83,32 @@ Currently for and ESP32. Needs wifi connection.
   4. Add the code from above to https://api.weather.gov/stations/{stationIdentifier}/observations/latest?require_qc=true
      - Example: https://api.weather.gov/stations/PAWD/observations/latest?require_qc=true
 
-### Alerts (Variable = website3)   ~*This breaks and might not reset to no alerts*  ~*This need to both Zone and county codes*
-  1. Locate the Federal Information Processing System (FIPS) Code for the wanted countys [Helpful Link](https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt)
+### Alerts (Variable = website3)   ~*This breaks and might not reset to no alerts*
+- Counties
+  1. Locate the Federal Information Processing System (FIPS) Code for the wanted counties [Helpful Link](https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt)
   2. Take the state abbreviation add C and then add the last 3 numbers of the FIPS code
      - Example: Douglas County, WI -> FIPS = 55031 -> WIC031
   3. Add the code from above to https://api.weather.gov/alerts/active/zone/{FIPScode}
      - Example: https://api.weather.gov/alerts/active/zone/WIC031
+- Zones
+  1. Use https://www.weather.gov/pimar/PubZone to locate the public zone that you want
+     - Example: Southern Houghton County MI, Zone 084
+  2. Take the state abbreviation add Z and then add the Zone number
+     - Example: Southern Houghton County, MI -> Zone = 084 -> MIZ084
+  3. Add the code from above to https://api.weather.gov/alerts/active/zone/{ZoneCode}
+     - Example: https://api.weather.gov/alerts/active/zone/MIZ084
     
 
 # Changes to Code/Function
 ## Change/Addition in new version
 This is what has changed in this version
- - Added a built in Discord messaging system using a bot
+ - Added a 2nd alert type do to missed alerts using only one.
 
 ## Old Change/Addition in new version
-V12
- - Added a second locations to send notifications for
- - Added mac address infomation
+V13
+ - Added a built in Discord messaging system using a bot
 
 ## Next Changes/Additions
 This could happen at any point in time
-
-
+ - Rewriting the variable system
+ - Rewriting the alert system
